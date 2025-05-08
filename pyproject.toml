@@ -1,0 +1,18 @@
+[project]
+name = "mylib"
+version = "0.1.0"
+description = "Library with generators and a timeout iterator"
+readme = "README.md"
+authors = [ { name = "Yuliia Kostandi", email = "julia.kostandi@gmail.com" } ]
+license = { text = "MIT" }
+keywords = [ "generator", "iterator", "timeout" ]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+dependencies = []
+
+[build-system]
+requires = [ "setuptools>=42", "wheel" ]
+build-backend = "setuptools.build_meta"
