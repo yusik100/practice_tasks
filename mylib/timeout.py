@@ -12,5 +12,5 @@ def run_with_timeout(iterator, timeout_sec):
         print(f"Value: {value}")
         total += value
         count += 1
-        average = total / count
-        print(f"  Total: {total}, Average: {average:.2f}")
+        average = total // count
+        print(f"  Total: {total}, Average: {average}")

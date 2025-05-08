@@ -3,7 +3,7 @@ name = "mylib-demo"
 version = "0.1.0"
 description = "Demo project for mylib"
 readme = "README.md"
-authors = [ { name="Ваше Ім’я", email="you@example.com" } ]
+authors = [ { name="Yuliia Kostandi", email="julia.kostandi@gmail.com" } ]
 dependencies = [
   'mylib @ file://../practice_tasks'
 ]
