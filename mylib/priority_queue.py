@@ -3,20 +3,15 @@ from collections import deque
 import itertools
 
 class BiDirectionalPriorityQueue:
-    """
-    Черга з підтримкою:
-      - отримання найвищого/найнижчого пріоритету
-      - отримання найстарішого/найновішого за вставкою
-    """
+
     def __init__(self):
         self._counter = itertools.count()
-        self._min_heap = []      # (priority, count, item, id)
-        self._max_heap = []      # (-priority, count, item, id)
-        self._deque = deque()    # (count, item, id)
-        self._entry_finder = {}  # id -> активність (True/False)
+        self._min_heap = []      
+        self._max_heap = []      
+        self._deque = deque()    
+        self._entry_finder = {}  
 
     def enqueue(self, item, priority):
-        """Додає елемент з пріоритетом."""
         eid = next(self._counter)
         heapq.heappush(self._min_heap, (priority, eid, item, eid))
         heapq.heappush(self._max_heap, (-priority, eid, item, eid))

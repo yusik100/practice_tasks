@@ -5,23 +5,20 @@ from mylib.priority_queue import BiDirectionalPriorityQueue
 
 
 def demo_fibonacci_timeout():
-    """Демо: генератор Фібоначчі з тайм-ау́том"""
-    print("=== Fibonacci with timeout (5 seconds) ===")
+    print(" Fibonacci with timeout (5 seconds) ")
     fib = fibonacci_generator()
     run_with_timeout(fib, timeout_sec=5)
 
 
 @memoize(max_size=10, policy="LRU")
 def slow_square(x):
-    """Повільна функція множення з затримкою, обгорнута мемоізацією"""
     import time
     time.sleep(0.5)
     return x * x
 
 
 def demo_memoization():
-    """Демо: показує кешування результатів slow_square"""
-    print("\n=== Memoization demo (slow_square) ===")
+    print("\n Memoization demo (slow_square) ")
     inputs = [4, 4, 5, 4]
     for i in inputs:
         result = slow_square(i)
@@ -29,8 +26,7 @@ def demo_memoization():
 
 
 def demo_priority_queue():
-    """Демо: двонаправлена черга пріоритетів"""
-    print("\n=== Priority Queue demo ===")
+    print("\n Priority Queue demo ")
     pq = BiDirectionalPriorityQueue()
     pq.enqueue("apple", priority=5)
     pq.enqueue("banana", priority=2)
